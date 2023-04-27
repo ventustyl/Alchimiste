@@ -1,0 +1,635 @@
+$desktop: 1280px;
+$tablette: 760px;
+$alpha: 0.3;
+$bottle-shake: 10px;
+$bottle-rotation: 5deg;
+$text-shadow-text: 2px 2px 2px rgb(0, 85, 255);
+$text-shadow-titre: 3px 3px 3px rgb(0, 0, 0);
+
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Poiret One", cursive;
+  letter-spacing: 3px;
+  line-height: 24px;
+  scroll-behavior: smooth;
+  nav {
+    position: fixed;
+    z-index: 560;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    transform: translateX(0px);
+    transition: 1s all;
+    .logo {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      .fiole {
+        height: 50px;
+        margin-right: 10px;
+        animation: shake 10s ease infinite;
+        animation-iteration-count: infinite;
+      }
+    
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+      }
+
+      @keyframes shake {
+        0% {
+          transform: rotate(0deg) translateX(0);
+        }
+        2% {
+          transform: rotate(-$bottle-rotation) translateX(-$bottle-shake);
+        }
+        4% {
+          transform: rotate(0deg) translateX(0);
+        }
+        6% {
+          transform: rotate($bottle-rotation) translateX($bottle-shake);
+        }
+        8% {
+          transform: rotate(0deg) translateX(0);
+        }
+        10% {
+          transform: rotate(-$bottle-rotation) translateX(-$bottle-shake);
+        }
+        12% {
+          transform: rotate(0deg) translateX(0);
+        }
+        14% {
+          transform: rotate($bottle-rotation) translateX($bottle-shake);
+        }
+        16% {
+          transform: rotate(0deg) translateX(0);
+        }
+        100% {
+          transform: rotate(0deg) translateX(0);
+        }
+      }
+    }
+  }
+
+  .burger {
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+  }
+  .active {
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+  }
+}
+
+.main {
+  z-index: 5;
+  position: absolute;
+  width: 100%;
+  background: black;
+  transition: 1s;
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 200px 0 0;
+    .text {
+      margin: auto;
+      width: 90%;
+      @media (min-width: $desktop) {
+        max-width: 1200px;
+        margin: auto;
+      }
+      h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: normal;
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        @media (min-width: $tablette) {
+          font-size: 50px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 70px;
+        }
+      }
+      h3 {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        line-height: normal;
+        @media (min-width: $tablette) {
+          font-size: 50px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 70px;
+        }
+      }
+      p {
+        margin: 50px 0 0;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        padding: 10px;
+        @media (min-width: $tablette) {
+          font-size: 30px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .motif {
+    background: white;
+    margin: 30px auto;
+    background-image: url(./images/motif.jpg);
+    width: 100%;
+    height: 40px;
+  }
+
+  .chef {
+    min-height: auto;
+    margin: auto;
+    width: 90%;
+    @media (min-width: $desktop) {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .text {
+      margin: auto;
+      padding-top: 5px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $desktop) {
+        max-width: 1200px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
+      img {
+        margin: 80px auto 20px;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        object-fit: contain;
+        @media (min-width: $tablette) {
+          width: 70%;
+        }
+        @media (min-width: $desktop) {
+          width: 30%;
+          margin: 40px 20px;
+        }
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-top: 20px;
+        text-shadow: 2px 2px 2px #add8e6;
+        @media (min-width: $tablette) {
+          line-height: 60px;
+          font-size: 40px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 40px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 2px;
+          background: #add8e6;
+          margin-right: 10px;
+        }
+      }
+      h3 {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        line-height: normal;
+        margin-top: 20px;
+        @media (min-width: $tablette) {
+          font-size: 30px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 30px;
+        }
+      }
+      p {
+        text-shadow: 2px 2px 2px rgb(0, 85, 255);
+        margin-top: 20px;
+        @media (min-width: $tablette) {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 25px;
+        }
+      }
+    }
+    .presentation {
+      max-width: 90%;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-around;
+      img {
+        object-fit: scale-down;
+        width: 25%;
+        transition: 2s;
+        &:hover {
+          scale: 2;
+          transition: 2s;
+        }
+      }
+    }
+    .menu_text {
+      margin: auto;
+      padding-top: 5px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $desktop) {
+        max-width: 1200px;
+        width: 100%;
+      }
+      img {
+        margin: 80px auto 20px;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        object-fit: contain;
+        @media (min-width: $tablette) {
+          width: 70%;
+        }
+        @media (min-width: $desktop) {
+          width: 30%;
+          margin: 40px 20px;
+        }
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-top: 20px;
+        text-shadow: 2px 2px 2px #add8e6;
+        @media (min-width: $tablette) {
+          line-height: 60px;
+          font-size: 40px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 40px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 2px;
+          background: #add8e6;
+          margin-right: 10px;
+        }
+      }
+      h3 {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+        line-height: normal;
+        margin-top: 20px;
+        @media (min-width: $tablette) {
+          font-size: 30px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 30px;
+        }
+      }
+      .produit {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @media (min-width: $desktop) {
+          max-width: 1200px;
+          flex-direction: row;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          text-align: center;
+          
+          @media (min-width: $desktop) {
+            width: 40%;
+          }
+          img{
+            @media (min-width: $tablette) {
+              width: 40%;
+            }
+         
+          }
+          h4 {
+            font-size: 25px;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 3px rgb(0, 0, 0);
+            line-height: normal;
+            margin-top: 20px;
+          }
+          p{
+            text-align: left;
+            font-size: 18px
+          }
+          .prix{
+            margin-left: 60px;
+            text-align: right;
+            @media (min-width: $tablette) {
+              margin-left: 150px;
+            }
+          }
+        }
+      }
+      .menu_2 {
+        padding-top: 80px;
+      }
+      p {
+        text-shadow: 2px 2px 2px rgb(0, 85, 255);
+        margin-top: 20px;
+        @media (min-width: $tablette) {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        @media (min-width: $desktop) {
+          font-size: 20px;
+        }
+      }
+      .accordeon {
+        margin: 30px auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-content: center;
+        background-color: black;
+        .image {
+          height: 400px;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 33%;
+          transition: 1s ease;
+          &:hover {
+            width: 150%;
+          }
+        }
+
+        .image1 {
+          background-image: url(./images/img1.jpg);
+        }
+
+        .image2 {
+          background-image: url(./images/img2.jpg);
+        }
+
+        .image3 {
+          background-image: url(./images/img3.jpg);
+        }
+      }
+    }
+    .galerie {
+      width: 90%;
+      margin: 30px auto 0;
+      height: 300px;
+      animation: image_galerie 25s ease-in-out infinite;
+      @media (min-width: $tablette) {
+        max-width: 90%;
+        height: 515px;
+      }
+
+      @media (min-width: $desktop) {
+        max-width: 1200px;
+        height: 715px;
+      }
+    }
+    @keyframes image_galerie {
+      0% {
+        background: url(./images/restaurant1.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+      }
+      20% {
+        background: url(./images/restaurant1.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 1;
+      }
+      40% {
+        opacity: 0;
+      }
+      50% {
+        background: url(./images/restaurant2.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 1;
+      }
+      70% {
+        opacity: 0;
+      }
+      80% {
+        background: url(./images/restaurant3.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 1;
+      }
+      90% {
+        opacity: 0;
+        background: url(./images/restaurant3.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .offre {
+      margin: 20px auto;
+      max-width: 90%;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: $tablette) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      @media (min-width: $desktop) {
+        max-width: 1200px;
+        margin: 50px auto;
+      }
+      div {
+        margin: 30px auto;
+        width: 90%;
+        @media (min-width: $tablette) {
+          width: 45%;
+        }
+        @media (min-width: $desktop) {
+          width: 23%;
+        }
+        img {
+          object-fit: scale-down;
+          width: 100%;
+        }
+        h4 {
+          font-size: 20px;
+          text-transform: uppercase;
+          text-shadow: 3px 3px 3px rgb(0, 0, 0);
+          line-height: normal;
+          margin: 20px auto;
+        }
+        .prix {
+          margin-top: 30px;
+          text-align: right;
+        }
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    z-index: 9999;
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    @media (min-width: $tablette) {
+      flex-direction: row;
+    }
+    @media (min-width: $desktop) {
+      max-width: 1200px;
+    }
+    div {
+      width: 90%;
+      margin: 0px auto 20px;
+      @media (min-width: $desktop) {
+        width: auto;
+      }
+      &:nth-child(1) {
+        @media (min-width: $desktop) {
+          width: 35%;
+        }
+      }
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          padding-left: 20px;
+        }
+      }
+      h5 {
+        font-size: 20px;
+        margin: 10px auto 5px;
+      }
+    }
+    .reseau {
+      display: flex;
+  
+      @media (min-width: $tablette) {
+        width: 5%;
+        flex-direction: column;
+      }
+      img {
+        width: 25px;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding-left: 50px;
+  ul {
+    list-style-type: none;
+    li {
+      display: flex;
+      margin-bottom: 15px;
+      img {
+        width: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(-0px);
+  transition: 1s all;
+}
+
+.active1 {
+  transform: translateX(-300px);
+  transition: 1s all;
+  @media (min-width: $tablette) {
+    transform: translateX(-600px);
+    transition: 1s all;
+  }
+  @media (min-width: $desktop) {
+    transform: translateX(-1100px);
+    transition: 1s all;
+  }
+  @media (min-width: 1800px) {
+    transform: translateX(-1700px);
+    transition: 1s all;
+  }
+}
+
+.active2 {
+  overflow: hidden;
+}
