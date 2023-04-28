@@ -1,8 +1,15 @@
+// Résolution
 $desktop: 1280px;
 $tablette: 760px;
+
+// Alpha
 $alpha: 0.3;
+
+// Animation bouteille
 $bottle-shake: 10px;
 $bottle-rotation: 5deg;
+
+// Ombre texte
 $text-shadow-text: 2px 2px 2px rgb(0, 85, 255);
 $text-shadow-titre: 3px 3px 3px rgb(0, 0, 0);
 
@@ -38,7 +45,7 @@ $text-shadow-titre: 3px 3px 3px rgb(0, 0, 0);
         animation: shake 10s ease infinite;
         animation-iteration-count: infinite;
       }
-    
+
       a {
         text-decoration: none;
         text-transform: uppercase;
@@ -353,15 +360,14 @@ $text-shadow-titre: 3px 3px 3px rgb(0, 0, 0);
           align-items: center;
           width: 90%;
           text-align: center;
-          
+
           @media (min-width: $desktop) {
             width: 40%;
           }
-          img{
+          img {
             @media (min-width: $tablette) {
               width: 40%;
             }
-         
           }
           h4 {
             font-size: 25px;
@@ -370,11 +376,11 @@ $text-shadow-titre: 3px 3px 3px rgb(0, 0, 0);
             line-height: normal;
             margin-top: 20px;
           }
-          p{
+          p {
             text-align: left;
-            font-size: 18px
+            font-size: 18px;
           }
-          .prix{
+          .prix {
             margin-left: 60px;
             text-align: right;
             @media (min-width: $tablette) {
@@ -569,7 +575,7 @@ $text-shadow-titre: 3px 3px 3px rgb(0, 0, 0);
     }
     .reseau {
       display: flex;
-  
+
       @media (min-width: $tablette) {
         width: 5%;
         flex-direction: column;
