@@ -1,5 +1,6 @@
 # Alchimiste
 
+https://github.com/ventustyl/Alchimiste/blob/main/logo.png
 
 Bonjour, pour ma première participation je vous présente le site web : L’Alchimiste, un restaurant de cuisine moléculaire fictif. Pour sa réalisation, j'ai utilisé des technologies de base telles que HTML, SCSS et JS.
 Le design est simple mais efficace, avec des animations subtiles en SCSS. J'ai opté pour une approche mobile-first avec deux points de rupture pour les tablettes (à 760px) et les ordinateurs de bureau (à 1280px).
